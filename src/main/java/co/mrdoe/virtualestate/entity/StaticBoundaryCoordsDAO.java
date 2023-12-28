@@ -1,13 +1,14 @@
 package co.mrdoe.virtualestate.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.List;
 
 @Getter @Setter
-public class StaticBoundaryCoordsVO {
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
+public class StaticBoundaryCoordsDAO {
 
     private int id;
     private int link_id;
@@ -17,9 +18,6 @@ public class StaticBoundaryCoordsVO {
     private String b_coords;
     private int ln_code;
 
-    private String[] coordsList;
+    private List<List<CoordsVO>> coordsList;
 
-    private StaticBoundaryCoordsVO() {
-        this.coordsList = this.b_coords.split(";");
-    }
 }
