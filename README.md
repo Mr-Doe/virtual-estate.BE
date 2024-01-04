@@ -21,21 +21,22 @@
    <br />
 
 ***
-   ### 개발 환경
-   * ![](https://img.shields.io/badge/java-%23ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)![](https://img.shields.io/badge/17-grey?style=for-the-badge)
-   * ![](https://img.shields.io/badge/Springboot-6DB33F?style=for-the-badge&logo=Springboot&logoColor=white)![](https://img.shields.io/badge/3.2.1-grey?style=for-the-badge)
-   * ![](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Springboot&logoColor=white)
-     ![](https://img.shields.io/badge/Swagger-44cc11?style=for-the-badge&logo=swagger&logoColor=white)
-     ![](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)
-     ![](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-     ![](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+   - ### 개발 환경
+     * ![](https://img.shields.io/badge/java-%23ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)![](https://img.shields.io/badge/17-grey?style=for-the-badge)
+     * ![](https://img.shields.io/badge/Springboot-6DB33F?style=for-the-badge&logo=Springboot&logoColor=white)![](https://img.shields.io/badge/3.2.1-grey?style=for-the-badge)
+     * ![](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Springboot&logoColor=white)
+       ![](https://img.shields.io/badge/Swagger-44cc11?style=for-the-badge&logo=swagger&logoColor=white)
+       ![](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)
+       ![](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+       ![](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
      
 <br></br>
 
-## 
-   ### 플로우 챠트
-   ![flow](https://private-user-images.githubusercontent.com/85206794/294123080-64bcdaf6-3dd1-428d-bae3-b35675db6494.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQzNTY2OTQsIm5iZiI6MTcwNDM1NjM5NCwicGF0aCI6Ii84NTIwNjc5NC8yOTQxMjMwODAtNjRiY2RhZjYtM2RkMS00MjhkLWJhZTMtYjM1Njc1ZGI2NDk0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTA0VDA4MTk1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc4MDhlY2I2YmI5OWVjMzBiOWRlYWQwOTc0ZGZiZmQyYzEzMGE0ZGQzNTBkNDYzYmEzYTQ3NjY3MGI2ODVkNWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.MEXK-7YTeIXLfiLuQ1qLuCdkHl9eH6s4hoWM5HTdI9E)
-   
-   ### ERD
-   ![erd](https://private-user-images.githubusercontent.com/85206794/294123195-2e2cca78-619a-4558-8095-7ee7d6e6630d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQzNTY2OTIsIm5iZiI6MTcwNDM1NjM5MiwicGF0aCI6Ii84NTIwNjc5NC8yOTQxMjMxOTUtMmUyY2NhNzgtNjE5YS00NTU4LTgwOTUtN2VlN2Q2ZTY2MzBkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTA0VDA4MTk1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTllYWFhMTI5YWQ0NTQxMDk0YjFhM2M1YTdiNzA4MzUxZDBhNGY4NmRkMjQzYzVhZGIwNjlkYWMwYTdmOTA4NjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.bJp8BZ359EFFYIaLA8PCeSq8Euwt8dMJoM7kicfjmhM)
+   - ### 플로우 챠트
+     ![flow](https://private-user-images.githubusercontent.com/85206794/294124393-8aa108eb-7b56-42ce-b3af-7e741f87e231.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQzNTcwNTgsIm5iZiI6MTcwNDM1Njc1OCwicGF0aCI6Ii84NTIwNjc5NC8yOTQxMjQzOTMtOGFhMTA4ZWItN2I1Ni00MmNlLWIzYWYtN2U3NDFmODdlMjMxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTA0VDA4MjU1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTViOGZkZWU4NzRmZmU2MzQzMmJlNTM3YzhkODk1ZjhhOWVlZTdjZGU5ZDA5NDg1NjIwYzlmNzVkN2E0YWU1MTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.JSCbw-bI4fFKLavTNj4fuXi26WFKHYDsGiK0JQCPrgI)
+
+<br></br>
+
+   - ### ERD
+     ![erd](https://private-user-images.githubusercontent.com/85206794/294123195-2e2cca78-619a-4558-8095-7ee7d6e6630d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQzNTY2OTIsIm5iZiI6MTcwNDM1NjM5MiwicGF0aCI6Ii84NTIwNjc5NC8yOTQxMjMxOTUtMmUyY2NhNzgtNjE5YS00NTU4LTgwOTUtN2VlN2Q2ZTY2MzBkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTA0VDA4MTk1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTllYWFhMTI5YWQ0NTQxMDk0YjFhM2M1YTdiNzA4MzUxZDBhNGY4NmRkMjQzYzVhZGIwNjlkYWMwYTdmOTA4NjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.bJp8BZ359EFFYIaLA8PCeSq8Euwt8dMJoM7kicfjmhM)
