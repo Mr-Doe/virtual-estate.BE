@@ -42,6 +42,6 @@
 <br></br>
 
 - ### ERD
-  ![erd](https://raw.githubusercontent.com/Mr-Doe/image-tab/main/erd.png?token=GHSAT0AAAAAACMK6CM52YRX4JQAWEYG7MS4ZMYOFTA)
+  ![erd](https://github.com/Mr-Doe/image-tab/blob/main/erd.png)
 
 
