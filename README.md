@@ -1,9 +1,3 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.css" rel="stylesheet">
-<style>
-    .markdown-body {
-        background-color: white;
-    }
-</style>
 ## 가상부동산
 실제 대한민국 행정 구역을 지도위에 구획하여 일정 크기 블록으로 나누어 토지 분양을 합니다. <br>
 블록들은 GPS 좌표 정보 데이터를 기반으로 설계하고, 관리자가 행정 동/읍으로 분양지를 생성합니다. <br>
