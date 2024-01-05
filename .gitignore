@@ -8,7 +8,6 @@ build/
 /**/test
 /gradle
 /**/*.properties
-#.gradlew**
 
 ### STS ###
 .apt_generated
