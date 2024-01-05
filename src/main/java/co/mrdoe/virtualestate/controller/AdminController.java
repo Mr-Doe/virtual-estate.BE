@@ -22,21 +22,26 @@ public class AdminController {
     }
 
 
-    @GetMapping("/city-a")
-    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getCityAll() {
-        return new ResponseEntity<>(staticService.getCityAll(), HttpStatus.OK);
+    @GetMapping("/city-init")
+    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getCityNameAll() {
+        return new ResponseEntity<>(staticService.getCityNameAll(), HttpStatus.OK);
     }
-    @GetMapping("/dist-a/{id}")
-    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDistAllByCityId(@PathVariable("id")int cityId) {
-        return new ResponseEntity<>(staticService.getDistAllByCityId(cityId), HttpStatus.OK);
+    @GetMapping("/dist-a/coords-{cityId}")
+    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDistCoords(@PathVariable("cityId")int cityId) {
+        return new ResponseEntity<>(staticService.getDistCoordsAllByCityId(cityId), HttpStatus.OK);
     }
-    @GetMapping("/dng-a/{id}")
-    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDngAllByDistId(@PathVariable("id")int distId) {
-        return new ResponseEntity<>(staticService.getDngAllByDistId(distId), HttpStatus.OK);
+    @GetMapping("/dist-a/name-{cityId}")
+    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDistName(@PathVariable("cityId")int cityId) {
+        return new ResponseEntity<>(staticService.getDistNameAllByCityId(cityId), HttpStatus.OK);
     }
-    @GetMapping("/dng-{id}")
-    public ResponseEntity<StaticBoundaryCoordsDAO> getDngByDngId(@PathVariable("id")int dngId) {
-        return new ResponseEntity<>(staticService.getDngByDngId(dngId), HttpStatus.OK);
+    @GetMapping("/dng-a/coords-{distId}")
+    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDngCoords(@PathVariable("distId")int distId) {
+        return new ResponseEntity<>(staticService.getDngCoordsAllByDistId(distId), HttpStatus.OK);
     }
+    @GetMapping("/dng-a/name-{distId}")
+    public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDngName(@PathVariable("distId")int distId) {
+        return new ResponseEntity<>(staticService.getDngNameAllByDistId(distId), HttpStatus.OK);
+    }
+//    @GetMapping("/sale-a/cell-{dngId}")
 
 }

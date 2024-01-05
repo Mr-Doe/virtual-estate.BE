@@ -9,27 +9,43 @@ import java.util.List;
 public interface StaticBoundaryCoordsMapper {
 
     @Select(
-            "SELECT                                     \n" +
-            "   id, `name`, z_level, c_coords, b_coords \n" +
-            "FROM   static_city_coords                  \n" +
-            "WHERE  is_activated = 'Y'                  "
-    )List<StaticBoundaryCoordsDAO> findCityCoordsAll();
+            "SELECT                     \n" +
+            "   id, `name`              \n" +
+            "FROM   static_city_coords  \n" +
+            "WHERE  is_activated = 'Y'  "
+    )List<StaticBoundaryCoordsDAO> findCityNameAll();
 
     @Select(
-            "SELECT                                     \n" +
-            "   id, `name`, z_level, c_coords, b_coords \n" +
-            "FROM   static_dist_coords                  \n" +
-            "WHERE  is_activated = 'Y'                  \n" +
-            "   AND city_id = #{id}                     "
-    )List<StaticBoundaryCoordsDAO> findDistAllByCityId(@Param("id")int id);
+            "SELECT                             \n" +
+            "   id, z_level, c_coords, b_coords \n" +
+            "FROM   static_dist_coords          \n" +
+            "WHERE  is_activated = 'Y'          \n" +
+            "   AND city_id = #{id}             "
+    )List<StaticBoundaryCoordsDAO> findDistCoordsAllByCityId(@Param("id")int id);
 
     @Select(
-            "SELECT                                     \n" +
-            "   id, `name`, z_level, c_coords, b_coords \n" +
-            "FROM   static_dng_coords                   \n" +
-            "WHERE  is_activated = 'Y'                  \n" +
-            "   AND dist_id = #{id}                     "
-    )List<StaticBoundaryCoordsDAO> findDngAllByDistId(@Param("id")int id);
+            "SELECT                     \n" +
+            "   id, `name`              \n" +
+            "FROM   static_dist_coords  \n" +
+            "WHERE  is_activated = 'Y'  \n" +
+            "   AND city_id = #{id}     "
+    )List<StaticBoundaryCoordsDAO> findDistNameAllByCityId(@Param("id")int id);
+
+    @Select(
+            "SELECT                             \n" +
+            "   id, z_level, c_coords, b_coords \n" +
+            "FROM   static_dng_coords           \n" +
+            "WHERE  is_activated = 'Y'          \n" +
+            "   AND dist_id = #{id}             "
+    )List<StaticBoundaryCoordsDAO> findDngCoordsAllByDistId(@Param("id")int id);
+
+    @Select(
+            "SELECT                     \n" +
+            "   id, `name`              \n" +
+            "FROM   static_dng_coords   \n" +
+            "WHERE  is_activated = 'Y'  \n" +
+            "   AND dist_id = #{id}     "
+    )List<StaticBoundaryCoordsDAO> findDngNameAllByDistId(@Param("id")int id);
 
     @Select(
             "SELECT                                     \n" +

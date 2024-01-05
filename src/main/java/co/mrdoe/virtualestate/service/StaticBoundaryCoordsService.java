@@ -19,8 +19,11 @@ public class StaticBoundaryCoordsService {
         this.staticMapper = mapper;
     }
 
-    public List<StaticBoundaryCoordsDAO> getCityAll() {
-        List<StaticBoundaryCoordsDAO> result = staticMapper.findCityCoordsAll();
+    public List<StaticBoundaryCoordsDAO> getCityNameAll() {
+        return staticMapper.findCityNameAll();
+    }
+    public List<StaticBoundaryCoordsDAO> getDistCoordsAllByCityId(int cityId) {
+        List<StaticBoundaryCoordsDAO> result = staticMapper.findDistCoordsAllByCityId(cityId);
         for(StaticBoundaryCoordsDAO vo : result) {
             vo.setCoordsList(boundaryCoordsConverter(vo.getB_coords()));
             vo.setB_coords(null);
@@ -28,8 +31,11 @@ public class StaticBoundaryCoordsService {
         return result;
     }
 
-    public List<StaticBoundaryCoordsDAO> getDistAllByCityId(int cityId) {
-        List<StaticBoundaryCoordsDAO> result = staticMapper.findDistAllByCityId(cityId);
+    public List<StaticBoundaryCoordsDAO> getDistNameAllByCityId(int cityId) {
+        return staticMapper.findDistNameAllByCityId(cityId);
+    }
+    public List<StaticBoundaryCoordsDAO> getDngCoordsAllByDistId(int distId) {
+        List<StaticBoundaryCoordsDAO> result = staticMapper.findDngCoordsAllByDistId(distId);
         for(StaticBoundaryCoordsDAO vo : result) {
             vo.setCoordsList(boundaryCoordsConverter(vo.getB_coords()));
             vo.setB_coords(null);
@@ -37,15 +43,9 @@ public class StaticBoundaryCoordsService {
         return result;
     }
 
-    public List<StaticBoundaryCoordsDAO> getDngAllByDistId(int distId) {
-        List<StaticBoundaryCoordsDAO> result = staticMapper.findDngAllByDistId(distId);
-        for(StaticBoundaryCoordsDAO vo : result) {
-            vo.setCoordsList(boundaryCoordsConverter(vo.getB_coords()));
-            vo.setB_coords(null);
-        }
-        return result;
+    public List<StaticBoundaryCoordsDAO> getDngNameAllByDistId(int distId) {
+        return staticMapper.findDngNameAllByDistId(distId);
     }
-
     public StaticBoundaryCoordsDAO getDngByDngId(int dngId) {
         StaticBoundaryCoordsDAO result = staticMapper.findDngByDngId(dngId);
         result.setCoordsList(boundaryCoordsConverter(result.getB_coords()));
