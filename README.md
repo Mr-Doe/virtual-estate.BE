@@ -36,7 +36,7 @@
 <br></br>
 
 - ### 플로우 챠트
-  ![flow](https://raw.githubusercontent.com/Mr-Doe/image-tab/main/flow.png?token=GHSAT0AAAAAACMK6CM5WKZI7PQOXGKPH76WZMYOCJA)
+  ![flow](https://github.com/Mr-Doe/image-tab/blob/main/flow.png?raw=true)
 
 
 <br></br>
