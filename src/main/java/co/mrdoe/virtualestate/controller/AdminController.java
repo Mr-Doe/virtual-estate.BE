@@ -1,6 +1,8 @@
 package co.mrdoe.virtualestate.controller;
 
+import co.mrdoe.virtualestate.entity.LandSaleConfigDAO;
 import co.mrdoe.virtualestate.entity.StaticBoundaryCoordsDAO;
+import co.mrdoe.virtualestate.service.LandSalesConfigService;
 import co.mrdoe.virtualestate.service.StaticBoundaryCoordsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,33 +17,39 @@ import java.util.List;
 public class AdminController {
 
     private final StaticBoundaryCoordsService staticService;
+    private final LandSalesConfigService landService;
 
     @Autowired
-    public AdminController(StaticBoundaryCoordsService service) {
-        this.staticService = service;
+    public AdminController(StaticBoundaryCoordsService staticService, LandSalesConfigService landService) {
+        this.staticService = staticService;
+        this.landService = landService;
     }
 
 
-    @GetMapping("/city-init")
+    @GetMapping("/list/city")
     public ResponseEntity<List<StaticBoundaryCoordsDAO>> getCityNameAll() {
         return new ResponseEntity<>(staticService.getCityNameAll(), HttpStatus.OK);
     }
-    @GetMapping("/dist-a/coords-{cityId}")
+    @GetMapping("/map/dist-{cityId}")
     public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDistCoords(@PathVariable("cityId")int cityId) {
         return new ResponseEntity<>(staticService.getDistCoordsAllByCityId(cityId), HttpStatus.OK);
     }
-    @GetMapping("/dist-a/name-{cityId}")
+    @GetMapping("/list/dist-{cityId}")
     public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDistName(@PathVariable("cityId")int cityId) {
         return new ResponseEntity<>(staticService.getDistNameAllByCityId(cityId), HttpStatus.OK);
     }
-    @GetMapping("/dng-a/coords-{distId}")
+    @GetMapping("/map/dng-{distId}")
     public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDngCoords(@PathVariable("distId")int distId) {
         return new ResponseEntity<>(staticService.getDngCoordsAllByDistId(distId), HttpStatus.OK);
     }
-    @GetMapping("/dng-a/name-{distId}")
+    @GetMapping("/list/dng-{distId}")
     public ResponseEntity<List<StaticBoundaryCoordsDAO>> getDngName(@PathVariable("distId")int distId) {
         return new ResponseEntity<>(staticService.getDngNameAllByDistId(distId), HttpStatus.OK);
     }
-//    @GetMapping("/sale-a/cell-{dngId}")
+
+    @GetMapping("/list/land-{distId}")
+    public ResponseEntity<List<LandSaleConfigDAO>> getLandSalesNAme(@PathVariable("distId")int distId) {
+        return new ResponseEntity<>(landService.getLandSalesNameByDistId(distId), HttpStatus.OK);
+    }
 
 }

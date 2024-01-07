@@ -2,6 +2,7 @@ package co.mrdoe.virtualestate.repository;
 
 import co.mrdoe.virtualestate.entity.StaticBoundaryCoordsDAO;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -49,7 +50,7 @@ public interface StaticBoundaryCoordsMapper {
 
     @Select(
             "SELECT                                     \n" +
-            "   id, `name`, z_level, c_coords, b_coords \n" +
+            "   id, z_level, c_coords, b_coords \n" +
             "FROM   static_dng_coords                   \n" +
             "WHERE  is_activated = 'Y'                  \n" +
             "   AND id = #{id}                          "
