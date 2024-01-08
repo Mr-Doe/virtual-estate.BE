@@ -1,5 +1,6 @@
 package co.mrdoe.virtualestate.controller;
 
+import co.mrdoe.virtualestate.config.Docs.AdminControllerDocs;
 import co.mrdoe.virtualestate.entity.LandSaleConfigDAO;
 import co.mrdoe.virtualestate.entity.StaticBoundaryCoordsDAO;
 import co.mrdoe.virtualestate.service.LandSalesConfigService;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/admin")
-public class AdminController {
+public class AdminController implements AdminControllerDocs {
 
     private final StaticBoundaryCoordsService staticService;
     private final LandSalesConfigService landService;
@@ -24,7 +25,6 @@ public class AdminController {
         this.staticService = staticService;
         this.landService = landService;
     }
-
 
     @GetMapping("/list/city")
     public ResponseEntity<List<StaticBoundaryCoordsDAO>> getCityNameAll() {
