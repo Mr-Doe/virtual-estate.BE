@@ -19,10 +19,10 @@ public class StaticBoundaryCoordsService {
         this.staticMapper = mapper;
     }
 
-    public List<StaticBoundaryCoordsDAO> getCityNameAll() {
+    public List<StaticBoundaryCoordsDAO> selectCityNameAll() {
         return staticMapper.findCityNameAll();
     }
-    public List<StaticBoundaryCoordsDAO> getDistCoordsAllByCityId(int cityId) {
+    public List<StaticBoundaryCoordsDAO> selectDistCoordsAllByCityId(int cityId) {
         List<StaticBoundaryCoordsDAO> result = staticMapper.findDistCoordsAllByCityId(cityId);
         for(StaticBoundaryCoordsDAO vo : result) {
             vo.setCoordsList(boundaryCoordsConverter(vo.getB_coords()));
@@ -31,10 +31,10 @@ public class StaticBoundaryCoordsService {
         return result;
     }
 
-    public List<StaticBoundaryCoordsDAO> getDistNameAllByCityId(int cityId) {
+    public List<StaticBoundaryCoordsDAO> selectDistNameAllByCityId(int cityId) {
         return staticMapper.findDistNameAllByCityId(cityId);
     }
-    public List<StaticBoundaryCoordsDAO> getDngCoordsAllByDistId(int distId) {
+    public List<StaticBoundaryCoordsDAO> selectDngCoordsAllByDistId(int distId) {
         List<StaticBoundaryCoordsDAO> result = staticMapper.findDngCoordsAllByDistId(distId);
         for(StaticBoundaryCoordsDAO vo : result) {
             vo.setCoordsList(boundaryCoordsConverter(vo.getB_coords()));
@@ -43,7 +43,7 @@ public class StaticBoundaryCoordsService {
         return result;
     }
 
-    public List<StaticBoundaryCoordsDAO> getDngNameAllByDistId(int distId) {
+    public List<StaticBoundaryCoordsDAO> selectDngNameAllByDistId(int distId) {
         return staticMapper.findDngNameAllByDistId(distId);
     }
     public StaticBoundaryCoordsDAO getDngByDngId(int dngId) {
