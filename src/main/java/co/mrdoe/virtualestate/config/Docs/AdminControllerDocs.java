@@ -1,5 +1,6 @@
 package co.mrdoe.virtualestate.config.Docs;
 
+import co.mrdoe.virtualestate.entity.LandEstateConfigDTO;
 import co.mrdoe.virtualestate.entity.LandSaleConfigDAO;
 import co.mrdoe.virtualestate.entity.StaticBoundaryCoordsDAO;
 import io.swagger.v3.oas.annotations.Operation;
@@ -87,7 +88,7 @@ public interface AdminControllerDocs {
                         "\"lease_expire\"       :   \"1-1-1 1:1:1\",     " +
                         "\"salt\"               :   \"is this right the password?\"" +
                         "}                                              ")))
-    ResponseEntity<String> postLandSalesConfig(LandSaleConfigDAO landDAO);
+    ResponseEntity<String> postLandSalesConfig(LandEstateConfigDTO landDTO);
     @Operation(summary = "분양지 설정 조회"
             ,description = "<h2>[설정]</h2>" +
                             "<h3>분양지 ID로 분양지 설정 된 값 불러오기</h3>")

@@ -3,6 +3,7 @@ package co.mrdoe.virtualestate.repository;
 import co.mrdoe.virtualestate.entity.LandSaleConfigDAO;
 import org.apache.ibatis.annotations.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Mapper
@@ -45,7 +46,7 @@ public interface LandSalesConfigMapper {
             "   ,#{landDAO.lease_expire}        \n" +
             ")                                  "
     )@Options(useGeneratedKeys = true, keyProperty = "id")
-    void saveLandSalesConfig(@Param("landDAO")LandSaleConfigDAO landDAO);
+    int saveLandSalesConfig(@Param("landDAO")LandSaleConfigDAO landDAO);
     @Select(
             "SELECT                             \n" +
             "   land.id                         \n" +

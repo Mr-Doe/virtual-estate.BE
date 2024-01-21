@@ -12,10 +12,10 @@ import java.util.List;
 @Service
 public class StaticBoundaryCoordsService {
 
-    public final StaticBoundaryCoordsMapper staticMapper;
+    private final StaticBoundaryCoordsMapper staticMapper;
 
     @Autowired
-    public StaticBoundaryCoordsService(StaticBoundaryCoordsMapper mapper) {
+    private StaticBoundaryCoordsService(StaticBoundaryCoordsMapper mapper) {
         this.staticMapper = mapper;
     }
 

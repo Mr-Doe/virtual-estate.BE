@@ -3,6 +3,7 @@ package co.mrdoe.virtualestate.service;
 import co.mrdoe.virtualestate.entity.LandSaleConfigDAO;
 import co.mrdoe.virtualestate.repository.LandSalesConfigMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,11 +12,15 @@ import java.util.List;
 @Service
 public class LandSalesConfigService {
 
-    public final LandSalesConfigMapper landMapper;
+    private final LandSalesConfigMapper landMapper;
+    private final StaticBlockCoordsService blockService;
 
     @Autowired
-    public LandSalesConfigService(LandSalesConfigMapper mapper) {
-        this.landMapper = mapper;
+    public LandSalesConfigService(LandSalesConfigMapper landMapper
+                                  ,StaticBlockCoordsService blockService
+    ) {
+        this.landMapper = landMapper;
+        this.blockService = blockService;
     }
 
     public List<LandSaleConfigDAO> selectLandSalesNameByDistId(int distId) {
@@ -24,9 +29,10 @@ public class LandSalesConfigService {
 
     @Transactional(rollbackFor = Exception.class)
     public int insertLandSalesConfig(LandSaleConfigDAO landDAO) throws Exception {
-        landMapper.saveLandSalesConfig(landDAO);
-        if(landDAO.getSalt().equals("is this right the password?") && landDAO.getId() < 1)
-            throw new Exception("save failed!!");
+        if(!landDAO.getSalt().equals("is this right the password?") && landDAO.getId() < 1)
+            throw new Exception("passwd failed!!");
+        if(landMapper.saveLandSalesConfig(landDAO) == 0)
+            throw new Exception("save failed :: LandSales");
         return landDAO.getId();
     }
     public LandSaleConfigDAO selectLandSalesConfig(int landId) {
