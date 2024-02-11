@@ -3,7 +3,6 @@ package co.mrdoe.virtualestate.service;
 import co.mrdoe.virtualestate.entity.LandSaleConfigDAO;
 import co.mrdoe.virtualestate.repository.LandSalesConfigMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,14 +12,10 @@ import java.util.List;
 public class LandSalesConfigService {
 
     private final LandSalesConfigMapper landMapper;
-    private final StaticBlockCoordsService blockService;
 
     @Autowired
-    public LandSalesConfigService(LandSalesConfigMapper landMapper
-                                  ,StaticBlockCoordsService blockService
-    ) {
+    public LandSalesConfigService(LandSalesConfigMapper landMapper) {
         this.landMapper = landMapper;
-        this.blockService = blockService;
     }
 
     public List<LandSaleConfigDAO> selectLandSalesNameByDistId(int distId) {

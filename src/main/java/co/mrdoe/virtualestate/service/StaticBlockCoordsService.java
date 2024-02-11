@@ -17,7 +17,7 @@ public class StaticBlockCoordsService {
     private final StaticBlockCoordsMapper blockMapper;
 
     @Autowired
-    private StaticBlockCoordsService(StaticBlockCoordsMapper blockMapper) {
+    public StaticBlockCoordsService(StaticBlockCoordsMapper blockMapper) {
         this.blockMapper = blockMapper;
     }
 

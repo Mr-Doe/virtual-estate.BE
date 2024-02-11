@@ -15,7 +15,7 @@ public class StaticBoundaryCoordsService {
     private final StaticBoundaryCoordsMapper staticMapper;
 
     @Autowired
-    private StaticBoundaryCoordsService(StaticBoundaryCoordsMapper mapper) {
+    public StaticBoundaryCoordsService(StaticBoundaryCoordsMapper mapper) {
         this.staticMapper = mapper;
     }
 

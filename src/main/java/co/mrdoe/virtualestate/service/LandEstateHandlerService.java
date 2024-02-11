@@ -14,12 +14,9 @@ public class LandEstateHandlerService {
     private final LandSalesRefDngMapper refMapper;
 
     @Autowired
-
-    public LandEstateHandlerService(
-        LandSalesConfigService landService
-        ,StaticBlockCoordsService blockService
-        ,LandSalesRefDngMapper refMapper
-    ) {
+    public LandEstateHandlerService(LandSalesConfigService landService
+                                    ,StaticBlockCoordsService blockService
+                                    ,LandSalesRefDngMapper refMapper ) {
         this.landService = landService;
         this.blockService = blockService;
         this.refMapper = refMapper;
