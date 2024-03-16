@@ -8,6 +8,7 @@ build/
 /**/test
 /gradle
 /**/datasource.properties
+/**/*.org
 
 ### STS ###
 .apt_generated
